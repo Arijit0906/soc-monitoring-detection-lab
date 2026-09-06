@@ -4,6 +4,7 @@
 This self-directed portfolio project demonstrates the deployment of a centralized logging infrastructure tailored for security operations. By configuring a centralized SIEM platform, this environment bridges the gap between offensive attack emulation and defensive log analysis. 
 
 The primary objective is to simulate real-world cyber attacks from a dedicated offensive workstation and utilize localized agent forwarding to aggregate endpoint telemetry. This central repository allows for the creation of targeted detection rules, custom Splunk Search Processing Language (SPL) queries, and rigorous incident investigations.
+
 ---
 
 ## 🏗️ Core Architecture & Environment Components
