@@ -22,5 +22,6 @@ The environment is structured into distinct functional zones to separate the sec
 ## 🌐 Network & Data Architecture Diagram
 
 Data flows natively from both the Windows 10 target and the local Kali Linux subsystem via individual Splunk Universal Forwarders. These agents parse and securely route distinct event telemetry over TCP port 9997 into the centralized Splunk Enterprise indexer.
+
 https://github.com/user-attachments/assets/746684ad-c4bd-407e-9a56-826ef7e2987f
 
