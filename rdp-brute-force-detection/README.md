@@ -1,4 +1,4 @@
-# My Splunk Investigation and Triage Playbook
+# RDP Brute-Force Detection & Incident Response Playbook
 
 This document details how I routed logs from my Windows 10 VM into Splunk, followed by the step-by-step investigation I conducted to uncover the RDP attack lifecycle based on my live SIEM data.
 
